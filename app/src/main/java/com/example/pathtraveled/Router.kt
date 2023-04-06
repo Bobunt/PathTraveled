@@ -40,5 +40,4 @@ object Router {
         clearBackStack(fm)
         showInFragmentMainFragent(mapFragment(), fm, addToBackStack = false)
     }
-
 }

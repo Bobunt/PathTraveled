@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.pathtraveled"
-        minSdk 19
+        minSdk 21
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -46,4 +46,6 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    //map
+    implementation 'com.yandex.android:maps.mobile:4.3.1-full'
 }
