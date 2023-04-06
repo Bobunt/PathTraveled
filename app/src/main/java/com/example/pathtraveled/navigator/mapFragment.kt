@@ -15,5 +15,4 @@ class mapFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_map, container, false)
     }
-
 }
