@@ -111,12 +111,12 @@ class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener{
 
     private fun onMapReady() {
         val mapKit = MapKitFactory.getInstance()
-        userLocationLayer = mapKit.createUserLocationLayer(binding.mapView.mapWindow)
+        userLocationLayer = mapKit.createUserLocationLayer(binding.mapview.mapWindow)
         userLocationLayer.isVisible = true
         userLocationLayer.isHeadingEnabled = true
         userLocationLayer.setObjectListener(this)
 
-        binding.mapView.map.addCameraListener(this)
+        binding.mapview.map.addCameraListener(this)
 
         cameraUserPosition()
 
@@ -126,11 +126,11 @@ class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener{
     private fun cameraUserPosition() {
         if (userLocationLayer.cameraPosition() != null) {
             routeStartLocation = userLocationLayer.cameraPosition()!!.target
-            binding.mapView.map.move(
+            binding.mapview.map.move(
                 CameraPosition(routeStartLocation, 16f, 0f, 0f), Animation(Animation.Type.SMOOTH, 1f), null
             )
         } else {
-            binding.mapView.map.move(CameraPosition(Point(0.0, 0.0), 16f, 0f, 0f))
+            binding.mapview.map.move(CameraPosition(Point(0.0, 0.0), 16f, 0f, 0f))
         }
     }
 
@@ -185,10 +185,10 @@ class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener{
     private fun setAnchor() {
         userLocationLayer.setAnchor(
             PointF(
-                (binding.mapView.width * 0.5).toFloat(), (binding.mapView.height * 0.5).toFloat()
+                (binding.mapview.width * 0.5).toFloat(), (binding.mapview.height * 0.5).toFloat()
             ),
             PointF(
-                (binding.mapView.width * 0.5).toFloat(), (binding.mapView.height * 0.83).toFloat()
+                (binding.mapview.width * 0.5).toFloat(), (binding.mapview.height * 0.83).toFloat()
             )
         )
 
