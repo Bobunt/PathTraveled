@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DCherrn/AllProjects/PathTraveled/app/src/main/res/drawable/ic_baseline_location_disabled_24.xml" value="0.327" />
+        <entry key="..\:/DCherrn/AllProjects/PathTraveled/app/src/main/res/drawable/ic_location_disabled_black_24dp.xml" value="0.327" />
         <entry key="..\:/DCherrn/AllProjects/PathTraveled/app/src/main/res/layout/activity_main.xml" value="0.20208333333333334" />
         <entry key="..\:/DCherrn/AllProjects/PathTraveled/app/src/main/res/layout/fragment_main.xml" value="0.20208333333333334" />
         <entry key="..\:/DCherrn/AllProjects/PathTraveled/app/src/main/res/layout/fragment_map.xml" value="0.33" />
