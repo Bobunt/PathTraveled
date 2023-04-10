@@ -22,8 +22,11 @@ class mainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.startMap.setOnClickListener{
+        binding.routeMap.setOnClickListener{
             Router.showInMapFragment(activity?.supportFragmentManager)
+        }
+        binding.getRouteMap.setOnClickListener{
+            Router.showInGetRouteMapFragment(activity?.supportFragmentManager)
         }
     }
 }

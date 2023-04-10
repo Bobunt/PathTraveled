@@ -18,6 +18,8 @@ import com.example.pathtraveled.databinding.FragmentMapBinding
 import com.yandex.mapkit.Animation
 import com.yandex.mapkit.MapKit
 import com.yandex.mapkit.MapKitFactory
+import com.yandex.mapkit.directions.driving.DrivingRoute
+import com.yandex.mapkit.directions.driving.DrivingSession
 import com.yandex.mapkit.geometry.Point
 import com.yandex.mapkit.layers.ObjectEvent
 import com.yandex.mapkit.logo.Alignment
@@ -36,7 +38,7 @@ import com.yandex.mapkit.user_location.UserLocationView
 import com.yandex.runtime.Error
 import com.yandex.runtime.image.ImageProvider
 
-class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener{
+class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener, DrivingSession.DrivingRouteListener{
     lateinit var mapview: MapView
     private var _binding: FragmentMapBinding? = null
     private val binding get() = _binding!!
@@ -49,6 +51,10 @@ class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener{
 
     private var permissionLocation = false
     private var followUserLocation = false
+
+    lateinit var searchSession: Session
+    private var ROUTE_START_LOCATION = Point(55.855800, 37.427300)
+    private var ROUTE_END_LOCATION = Point(55.839466, 37.408876)
 
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -201,5 +207,13 @@ class mapFragment : Fragment(), UserLocationObjectListener,  CameraListener{
         userLocationLayer.resetAnchor()
 
         binding.userLocationFab.setImageResource(R.drawable.ic_baseline_location_searching_24)
+    }
+
+    override fun onDrivingRoutes(p0: MutableList<DrivingRoute>) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onDrivingRoutesError(p0: Error) {
+        TODO("Not yet implemented")
     }
 }

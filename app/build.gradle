@@ -48,4 +48,5 @@ dependencies {
 
     //map
     implementation 'com.yandex.android:maps.mobile:4.3.1-full'
+    implementation 'androidx.room:room-ktx:2.5.1'
 }

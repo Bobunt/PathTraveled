@@ -40,4 +40,9 @@ object Router {
         clearBackStack(fm)
         showInFragmentMainFragent(mapFragment(), fm, addToBackStack = false)
     }
+
+    fun showInGetRouteMapFragment(fm: FragmentManager?){
+        clearBackStack(fm)
+        showInFragmentMainFragent(mapFragment(), fm, addToBackStack = false)
+    }
 }
